@@ -25,17 +25,13 @@ const prezzoInteroDecimale = parseFloat(prezzoIntero.toFixed(2));
 // 4) Stampare output prezzo in console con max due decimali
 
 if (etàPasseggero <= 17){
-    console.log("Il prezzo del biglietto è " + prezzoScontatoMinorenneDecimale); //string
+    console.log("Il prezzo del biglietto è " + Math.ceil(prezzoScontatoMinorenneDecimale)); //string
 
 } 
 
 else if (etàPasseggero >= 65) {
-    console.log("Il prezzo del biglietto è " + prezzoScontatoOverDecimale); //string
+    console.log("Il prezzo del biglietto è " +  Math.ceil(prezzoScontatoOverDecimale)); //string
 
 } else{
-    console.log("Il prezzo del biglietto è " + prezzoInteroDecimale)
+    console.log("Il prezzo del biglietto è " +  Math.ceil(prezzoInteroDecimale)); //string
 }
-
-
-// const num = 5.678;
-// const result = num.toFixed(2);
