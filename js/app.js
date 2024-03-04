@@ -13,20 +13,29 @@ const etàPasseggero = parseFloat(prompt("Età")); //number
 //    Prezzo biglietto intero in base ai km (0.21 euro al km)
 
 const prezzoIntero = numeroKm * 0.21; //number
+const prezzoInteroDecimale = parseFloat(prezzoIntero.toFixed(2));
 
 //    Prezzo biglietto scontato (20% se minorenne o 40% per over 65)
 
  const prezzoScontatoMinorenne = prezzoIntero * 0.20; //number
+ const prezzoScontatoMinorenneDecimale = parseFloat(prezzoScontatoMinorenne.toFixed(2));
  const prezzoScontatoOver = prezzoIntero * 0.40; //number
+ const prezzoScontatoOverDecimale = parseFloat(prezzoScontatoOver.toFixed(2));
     
 // 4) Stampare output prezzo in console con max due decimali
 
 if (etàPasseggero <= 17){
-    console.log("Il prezzo del biglietto è " + prezzoScontatoMinorenne); //string
+    console.log("Il prezzo del biglietto è " + prezzoScontatoMinorenneDecimale); //string
 
 } 
 
 else if (etàPasseggero >= 65) {
-    console.log("Il prezzo del biglietto è " + prezzoScontatoOver); //string
+    console.log("Il prezzo del biglietto è " + prezzoScontatoOverDecimale); //string
+
+} else{
+    console.log("Il prezzo del biglietto è " + prezzoInteroDecimale)
 }
 
+
+// const num = 5.678;
+// const result = num.toFixed(2);
