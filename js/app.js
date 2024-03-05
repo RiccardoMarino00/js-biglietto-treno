@@ -17,22 +17,26 @@ const prezzoIntero = numeroKm * 0.21; //number
     
 // 4) Stampare output prezzo in console con max due decimali
 
-if (etàPasseggero <= 17){
+    
+if (etàPasseggero <= 17){                                        
 
     //    Prezzo e stampa biglietto scontato (20% se minorenne)
 
-    const prezzoScontatoMinorenne = prezzoIntero * 0.20; //number
-    console.log("Il prezzo del biglietto è " + prezzoScontatoMinorenne.toFixed(2) + " Euro"); //string
+    const scontoMinorenne = prezzoIntero * 0.20; //number 
+    const prezzoFinaleMinorenne = prezzoIntero - scontoMinorenne                
+
+    console.log("Il prezzo del biglietto è " + prezzoFinaleMinorenne.toFixed(2) + " Euro"); //string
 
 } 
 
 else if (etàPasseggero >= 65) {
 
-   // Prezzo e stampa biglietto scontato (40% per over 65)
+   // Prezzo e stampa biglietto scontato (40% per over 65)               
 
-    const prezzoScontatoOver = prezzoIntero * 0.40; //number
+    const scontoOver = prezzoIntero * 0.40; //number            
+    const prezzoFinaleOver = prezzoIntero - scontoOver
 
-    console.log("Il prezzo del biglietto è " +  prezzoScontatoOver.toFixed(2) + " Euro"); //string
+    console.log("Il prezzo del biglietto è " +  prezzoFinaleOver.toFixed(2) + " Euro"); //string
 
     // Stampa biglietto èrezzo intero
 
